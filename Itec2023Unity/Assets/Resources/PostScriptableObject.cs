@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-[CreateAssetMenu(fileName = "ImageScriptableObject", menuName = "ScriptableObjects/ImagePostare", order = 2)]
-public class ImagePostareScriptableObject  : ScriptableObject
+[CreateAssetMenu(fileName = "PostObject", menuName = "ScriptableObjects/Post", order = 1)]
+public class PostScriptableObject : ScriptableObject
 {
+    [TextAreaAttribute]
+    public string Text;
     public Sprite Image;
 
     public List<string> PerfectMatch;

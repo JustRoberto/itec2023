@@ -6,29 +6,23 @@ using UnityEngine.UI;
 
 public class PostController : MonoBehaviour
 {
-    public List<TextPostareScriptableObject> AvailableTexts;
-    public List<ImagePostareScriptableObject> AvailableImages;
+    public List<PostScriptableObject> AvailablePost;
     public TextMeshProUGUI  textMesh;
     public Image Image;
     // Start is called before the first frame update
     void Awake()
     {
         
-        var texts = Resources.LoadAll("Texts", typeof(TextPostareScriptableObject));
-        var images = Resources.LoadAll("Images", typeof(ImagePostareScriptableObject));
+        var texts = Resources.LoadAll("Posts", typeof(PostScriptableObject));
         foreach (var t in texts)
         {
-            AvailableTexts.Add(t as TextPostareScriptableObject);
-        }
-        foreach (var i in images)
-        {
-            AvailableImages.Add(i as ImagePostareScriptableObject);
+            AvailablePost.Add(t as PostScriptableObject);
         }
 
-        int randomNum = Random.Range(0, AvailableTexts.Count);
-        textMesh.text = AvailableTexts[randomNum].Text;
-        randomNum = Random.Range(0, AvailableImages.Count);
-        Image.sprite = AvailableImages[randomNum].Image;
+
+        int randomNum = Random.Range(0, AvailablePost.Count);
+        textMesh.text = AvailablePost[randomNum].Text;
+        Image.sprite = AvailablePost[randomNum].Image;
     }
 
 }
