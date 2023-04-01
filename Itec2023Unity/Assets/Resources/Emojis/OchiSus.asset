@@ -17,6 +17,7 @@ MonoBehaviour:
   Description: se uita in sus, idk
   Type: 
   Sprite: {fileID: 21300000, guid: 13c9593252916804d9b402cc5ff22ba7, type: 3}
+  Tier: 1
   BaseHealth: 1
   BaseAttack: 0
   AbilityBaseDamage: 0

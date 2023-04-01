@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc5ccf3192ce2dc4d88bc1ec6165daee, type: 3}
   m_Name: Pokerface
   m_EditorClassIdentifier: 
-  Name: 
-  ID: 
+  Name: Pokerface
+  ID: Pokerface
   Description: 
   Type: 
   Sprite: {fileID: 21300000, guid: 6a7cd10a4a5137541a9c3d8af2f0ad1c, type: 3}
+  Tier: 2
   BaseHealth: 2
   BaseAttack: 2
   AbilityBaseDamage: 0

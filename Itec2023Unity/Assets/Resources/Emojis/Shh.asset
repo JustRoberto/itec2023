@@ -17,6 +17,7 @@ MonoBehaviour:
   Description: da silence? idk
   Type: 
   Sprite: {fileID: 21300000, guid: e442babcc51fd4146985ba9b2a1695d2, type: 3}
+  Tier: 2
   BaseHealth: 1
   BaseAttack: 1
   AbilityBaseDamage: 0

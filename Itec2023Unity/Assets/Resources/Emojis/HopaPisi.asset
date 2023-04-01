@@ -17,6 +17,7 @@ MonoBehaviour:
   Description: 
   Type: 
   Sprite: {fileID: 21300000, guid: 911e386f08c02824da52d61abea420cd, type: 3}
+  Tier: 1
   BaseHealth: 2
   BaseAttack: 1
   AbilityBaseDamage: 0

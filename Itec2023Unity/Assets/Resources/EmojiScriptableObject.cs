@@ -11,7 +11,7 @@ public class EmojiScriptableObject : ScriptableObject
     public string Description;
     public string Type;
     public Sprite Sprite;
-
+    public int Tier;
     public int BaseHealth;
     public int BaseAttack;
 

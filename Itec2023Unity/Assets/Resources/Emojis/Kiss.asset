@@ -17,6 +17,7 @@ MonoBehaviour:
   Description: charm?
   Type: 
   Sprite: {fileID: 21300000, guid: 84305e5caf7da1647ab32181513e54f5, type: 3}
+  Tier: 1
   BaseHealth: 0
   BaseAttack: 0
   AbilityBaseDamage: 0

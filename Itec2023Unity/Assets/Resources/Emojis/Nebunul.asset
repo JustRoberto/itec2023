@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cc5ccf3192ce2dc4d88bc1ec6165daee, type: 3}
-  m_Name: ZambetSimplu
+  m_Name: Nebunul
   m_EditorClassIdentifier: 
-  Name: Zambetsimplu
-  ID: zambet
-  Description: happy boy
+  Name: Nebunul
+  ID: nebunul
+  Description: 
   Type: 
-  Sprite: {fileID: 21300000, guid: 4bdceda2ab9535e49acd69de7a45e966, type: 3}
-  Tier: 1
+  Sprite: {fileID: 21300000, guid: e5935e241f48dcb45b96f8f19e57f080, type: 3}
+  Tier: 5
   BaseHealth: 1
-  BaseAttack: 1
+  BaseAttack: 10
   AbilityBaseDamage: 0
   AbilityBaseBoost: 0

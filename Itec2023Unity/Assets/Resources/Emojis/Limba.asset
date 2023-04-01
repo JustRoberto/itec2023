@@ -17,6 +17,7 @@ MonoBehaviour:
   Description: dement cu limba pe afara
   Type: 
   Sprite: {fileID: 21300000, guid: 2320ae48f62fd85439437b858c684fb1, type: 3}
+  Tier: 2
   BaseHealth: 2
   BaseAttack: 3
   AbilityBaseDamage: 0
