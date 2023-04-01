@@ -5,14 +5,17 @@ using UnityEngine;
 public class PlayerDeckController : MonoBehaviour
 {
     // Start is called before the first frame update
-    List<GameObject> emojis;
-
+    public List<EmojiScriptableObject> emojis;
+    public Transform parent;
+    public GameObject emojiprefab;
     void Start()
     {
-        foreach (Transform child in transform)
-        {
-            emojis.Add(child.gameObject);
-        }
-    }
 
+    }
+    public void Add(EmojiScriptableObject emoji)
+    {
+       var em = Instantiate(emojiprefab, parent);
+        em.GetComponent<EmojiController>().data = emoji;
+        emojis.Add(emoji);
+    }
 }
