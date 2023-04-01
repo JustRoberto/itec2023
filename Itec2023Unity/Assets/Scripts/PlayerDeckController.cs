@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerDeckController : MonoBehaviour
@@ -17,5 +18,15 @@ public class PlayerDeckController : MonoBehaviour
        var em = Instantiate(emojiprefab, parent);
         em.GetComponent<EmojiController>().data = emoji;
         emojis.Add(emoji);
+    }
+
+    public List<GameObject> getTeam()
+    {
+        var list = new List<GameObject>();
+        foreach (Transform child in transform)
+        {
+            list.Add(child.gameObject);
+        }
+        return list;
     }
 }

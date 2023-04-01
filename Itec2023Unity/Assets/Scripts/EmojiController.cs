@@ -28,7 +28,12 @@ public class EmojiController : MonoBehaviour
 
   public void Damage(int dmg)
     {
+        
         Health -= dmg; // - resistances mby
+        if(Health < 0)
+        {
+            Destroy(this.gameObject);
+        }
         RefreshStats();
     }
     public void RefreshStats()
