@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public PlayerDeckController playerDeck;
     public PlayerDeckController playerAttackDeck;
     public PlayerDeckController enemyAttackDeck;
+    public ShopController shop;
 
     public List<GameObject> playerTeam;
     public List<GameObject> enemyTeam;
@@ -84,18 +85,9 @@ public class GameManager : MonoBehaviour
         enemyTeam = enemyAttackDeck.getTeam();
 
 
-        if (!playerTeam.Any() && !enemyTeam.Any() )
+        if (!playerTeam.Any() && !enemyTeam.Any() ) // Draw
         {
-            playerDeck.EmptyDeck();
-            screen.StartMovingReverse();
-
-            playerAttackDeck.EmptyDeck();
-            enemyAttackDeck.EmptyDeck();
-            playerDeck.emojis.Clear();
-        }
-        else if(playerTeam.Any() && !enemyTeam.Any())
-        {
-            money += playerTeam.Count*2;
+            money += 11;
             moneyText.text = money.ToString();
 
             playerDeck.EmptyDeck();
@@ -104,10 +96,26 @@ public class GameManager : MonoBehaviour
             playerAttackDeck.EmptyDeck();
             enemyAttackDeck.EmptyDeck();
             playerDeck.emojis.Clear();
+            shop.RollShop();
+        }
+        else if(playerTeam.Any() && !enemyTeam.Any()) //Castig
+        {
+            money += playerTeam.Count + 11;
+            moneyText.text = money.ToString();
+
+            playerDeck.EmptyDeck();
+            screen.StartMovingReverse();
+
+            playerAttackDeck.EmptyDeck();
+            enemyAttackDeck.EmptyDeck();
+            playerDeck.emojis.Clear();
+            shop.RollShop();
 
         }
-        else if (!playerTeam.Any() && enemyTeam.Any())
+        else if (!playerTeam.Any() && enemyTeam.Any()) // Lose
         {
+            money += 11;
+            moneyText.text = money.ToString();
 
             playerDeck.EmptyDeck();
             screen.StartMovingReverse();
@@ -116,6 +124,7 @@ public class GameManager : MonoBehaviour
             playerAttackDeck.EmptyDeck();
             enemyAttackDeck.EmptyDeck();
             playerDeck.emojis.Clear();
+            shop.RollShop();
         }
     }
 }
