@@ -35,9 +35,22 @@ public class GameManager : MonoBehaviour
             
             playerAttackDeck.Add(emoji);    
             enemyAttackDeck.Add(emoji);
+            enemyAttackDeck.Shuffle();
         }
     }
 
+    public void Shuffle(List<PlayerDeckController> ts)
+    {
+        var count = ts.Count;
+        var last = count - 1;
+        for (var i = 0; i < last; ++i)
+        {
+            var r = UnityEngine.Random.Range(i, count);
+            var tmp = ts[i];
+            ts[i] = ts[r];
+            ts[r] = tmp;
+        }
+    }
     public void StartBattle()
     {
         playerTeam = playerAttackDeck.getTeam();
@@ -49,8 +62,12 @@ public class GameManager : MonoBehaviour
     {
         playerTeam = playerAttackDeck.getTeam();
         enemyTeam = enemyAttackDeck.getTeam();
-        playerTeam.Last().GetComponent<EmojiController>().Damage(1);
-        enemyTeam.Last().GetComponent<EmojiController>().Damage(1);
+        foreach (var item in enemyTeam)
+        {
+            Debug.Log(item.name);
+        }
+        playerTeam.Last().GetComponent<EmojiController>().Damage(enemyTeam.Last().GetComponent<EmojiController>().Attack);
+        enemyTeam.Last().GetComponent<EmojiController>().Damage(playerTeam.Last().GetComponent<EmojiController>().Attack);
         playerTeam = playerAttackDeck.getTeam();
         enemyTeam = enemyAttackDeck.getTeam();
     }

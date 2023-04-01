@@ -30,7 +30,7 @@ public class EmojiController : MonoBehaviour
     {
         
         Health -= dmg; // - resistances mby
-        if(Health < 0)
+        if(Health <= 0)
         {
             Destroy(this.gameObject);
         }
