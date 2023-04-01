@@ -95,7 +95,7 @@ public class GameManager : MonoBehaviour
         }
         else if(playerTeam.Any() && !enemyTeam.Any())
         {
-            money += playerTeam.Count;
+            money += playerTeam.Count*2;
             moneyText.text = money.ToString();
 
             playerDeck.EmptyDeck();
