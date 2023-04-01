@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cc5ccf3192ce2dc4d88bc1ec6165daee, type: 3}
-  m_Name: EmojiScriptableObject
+  m_Name: plang
   m_EditorClassIdentifier: 
-  Name: AngryEmoji
-  ID: angr
-  Description: he hates you
-  Type: sniper
-  Sprite: {fileID: 21300000, guid: a1a049df41cdec94790930d2009cec94, type: 3}
+  Name: plang
+  ID: plang
+  Description: eu plang
+  Type: 
+  Sprite: {fileID: 21300000, guid: 3fef2c288bda8d54b9935a1e20a1e047, type: 3}
   BaseHeatlth: 0
   BaseAttack: 0
   AbilityBaseDamage: 0
