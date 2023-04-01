@@ -35,10 +35,22 @@ public class GameManager : MonoBehaviour
        foreach(EmojiScriptableObject emoji in playerDeck.emojis)
         {
             
-            playerAttackDeck.Add(emoji);    
-            enemyAttackDeck.Add(emoji);
+            playerAttackDeck.Add(emoji);
+            
+
         }
-        enemyAttackDeck.Shuffle();
+        var availableEmojis = new List<EmojiScriptableObject>();
+        var allEmoji = Resources.LoadAll("Emojis", typeof(EmojiScriptableObject));
+        foreach (EmojiScriptableObject e in allEmoji)
+        {
+            availableEmojis.Add(e);
+        }
+        for (int i = 0; i < 5; i++)
+        {
+            int rand = Random.Range(0, availableEmojis.Count);
+            enemyAttackDeck.Add(availableEmojis[rand]);
+
+        }
     }
 
     public void Shuffle(List<PlayerDeckController> ts)

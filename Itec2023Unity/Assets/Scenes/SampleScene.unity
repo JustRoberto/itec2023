@@ -679,6 +679,7 @@ MonoBehaviour:
   playerDeck: {fileID: 1722561242}
   playerAttackDeck: {fileID: 699993648}
   enemyAttackDeck: {fileID: 52766704}
+  shop: {fileID: 1175418753}
   playerTeam: []
   enemyTeam: []
   moneyText: {fileID: 1624705744}
