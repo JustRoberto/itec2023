@@ -17,7 +17,7 @@ public class EmojiController : MonoBehaviour
     void Start()
     {
         Image.sprite = data.Sprite;
-        Health = data.BaseHeatlth;
+        Health = data.BaseHealth;
         Attack = data.BaseAttack;
         RefreshStats();
     }

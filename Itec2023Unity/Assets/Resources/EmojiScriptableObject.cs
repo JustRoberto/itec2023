@@ -12,7 +12,7 @@ public class EmojiScriptableObject : ScriptableObject
     public string Type;
     public Sprite Sprite;
 
-    public int BaseHeatlth;
+    public int BaseHealth;
     public int BaseAttack;
 
     public int AbilityBaseDamage;
