@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4424767a07ed66f45be682360040baeb, type: 3}
-  m_Name: PostObject
+  m_Name: PostLife
   m_EditorClassIdentifier: 
-  Text: 
+  Text: Feeling grateful for the simple things in life
   Image: {fileID: 0}
   PerfectMatch: []
   GoodMatch: []
