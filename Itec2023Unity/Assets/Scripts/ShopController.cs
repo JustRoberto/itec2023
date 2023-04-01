@@ -16,11 +16,12 @@ public class ShopController : MonoBehaviour
         var allEmoji = Resources.LoadAll("Emojis", typeof(EmojiScriptableObject));
         foreach (EmojiScriptableObject e in allEmoji)
         {
-            Debug.Log(e.Name);
             availableEmojis.Add(e);
         }
         //Initially Load 5
          RollShop();
+        GameManager.instance.money++;
+        GameManager.instance.moneyText.text = GameManager.instance.money.ToString();
     }
 
     // Update is called once per frame
@@ -30,16 +31,21 @@ public class ShopController : MonoBehaviour
     }
    public void RollShop()
     {
-        foreach(Transform child in transform)
+        if (GameManager.instance.money > 0)
         {
-            Destroy(child.gameObject);
-        }
-        for (int i = 0; i < 5; i++)
-        {
-            int rand = Random.Range(0, availableEmojis.Count );
-            emojisInStock.Add(availableEmojis[rand]);
-            GameObject em = Instantiate(EmojiPrefab, this.transform);
-            em.GetComponent<EmojiController>().data = availableEmojis[rand];
+            foreach (Transform child in transform)
+            {
+                Destroy(child.gameObject);
+            }
+            for (int i = 0; i < 5; i++)
+            {
+                int rand = Random.Range(0, availableEmojis.Count);
+                emojisInStock.Add(availableEmojis[rand]);
+                GameObject em = Instantiate(EmojiPrefab, this.transform);
+                em.GetComponent<EmojiController>().data = availableEmojis[rand];
+            }
+            GameManager.instance.money-=1;
+            GameManager.instance.moneyText.text = GameManager.instance.money.ToString();
         }
     }
 }

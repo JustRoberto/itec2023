@@ -13,6 +13,10 @@ public class EmojiController : MonoBehaviour
 
     public int Health;
     public int Attack;
+
+
+    public object Gameobject { get; private set; }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,5 +35,18 @@ public class EmojiController : MonoBehaviour
     {
         AttackValue.text = Attack.ToString();
         HealthValue.text = Health.ToString();
+    }
+    public void Buy()
+    {
+        if (this.transform.parent.gameObject.name == "Shop")
+        {
+            if (GameManager.instance.money >= 3)
+            {
+                GameManager.instance.playerDeck.Add(this.data);
+                GameManager.instance.money -= 3;
+                GameManager.instance.moneyText.text = GameManager.instance.money.ToString();
+                Destroy(this.gameObject);
+            }
+        }
     }
 }
