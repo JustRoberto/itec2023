@@ -44,17 +44,20 @@ public class PlayerDeckController : MonoBehaviour
     public List<GameObject> getTeam()
     {
         var list = new List<GameObject>();
-        foreach (Transform child in transform)
+        foreach (Transform child in parent.transform)
         {
-            if (child.name == "Content")
-            {
-                foreach (Transform child1 in child.transform)
-                {
-                    list.Add(child1.gameObject);
-                }
-            }
-            
+
+            list.Add(child.gameObject);
+
         }
         return list;
     }
+
+public void EmptyDeck()
+{
+    foreach (Transform child in parent.transform)
+    {
+        Destroy(child.gameObject);
+    }
+}
 }

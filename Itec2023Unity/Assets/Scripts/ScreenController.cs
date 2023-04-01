@@ -21,6 +21,10 @@ public class ScreenController : MonoBehaviour
             SmoothlyMove();
         }
     }
+    public void StartMovingReverse()
+    {
+        GetComponent<RectTransform>().position = new Vector3(960,540,0);
+    }
 
     void SmoothlyMove()
     {
@@ -40,4 +44,5 @@ public class ScreenController : MonoBehaviour
             isMoving = false;
         }
     }
+
 }
