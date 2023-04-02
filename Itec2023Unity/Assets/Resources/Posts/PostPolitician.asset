@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PostPolitician
   m_EditorClassIdentifier: 
   Text: Unbelievable! How These Corrupt Politicians Are Cheating You!
-  Image: {fileID: 0}
+  Image: {fileID: 21300000, guid: 4e35a83eb5c04314387322a17dceb1ba, type: 3}
   PerfectMatch: []
   GoodMatch: []
   BadMatch: []

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PostCreature
   m_EditorClassIdentifier: 
   Text: Terrifying Footage Captures Unexplainable Creature in the Woods
-  Image: {fileID: 0}
+  Image: {fileID: 21300000, guid: 45364860fb7506b438676d1962850356, type: 3}
   PerfectMatch: []
   GoodMatch: []
   BadMatch: []

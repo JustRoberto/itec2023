@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PostCatsProblems
   m_EditorClassIdentifier: 
   Text: The Shocking Secret Behind Why Cats Don't Care About Your Problems
-  Image: {fileID: 0}
+  Image: {fileID: 21300000, guid: 4695114e1c041f14d803e322dcd0eb46, type: 3}
   PerfectMatch: []
   GoodMatch: []
   BadMatch: []

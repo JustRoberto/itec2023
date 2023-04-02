@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PostWorldrecord
   m_EditorClassIdentifier: 
   Text: 'How this small town came together to break a world record:'
-  Image: {fileID: 0}
+  Image: {fileID: 21300000, guid: 1a91fd084eb55e844b7776f2b80e41ce, type: 3}
   PerfectMatch: []
   GoodMatch: []
   BadMatch: []
