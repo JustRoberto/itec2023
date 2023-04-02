@@ -62,10 +62,7 @@ public class EmojiController : MonoBehaviour
         ShakeObject(this.gameObject, 0.2f, 3);
 
     }
-    public void Snipe(EmojiController other)
-    {
-        FireProjectile(this.transform,other.transform)
-    }
+  
     public void FireProjectile(Vector2 startPos, Vector2 endPos)
     {
         GameObject projectile = Instantiate(projectilePrefab, startPos, Quaternion.identity);

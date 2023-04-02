@@ -145,6 +145,7 @@ public class GameManager : MonoBehaviour
             playerDeck.emojis.Clear();
             shop.RollShop();
             InShop = true;
+            GameObject.Find("PostarePrefab").GetComponent<PostController>().RefreshData();
         }
         else if(playerTeam.Any() && !enemyTeam.Any()) //Castig
         {
@@ -159,7 +160,7 @@ public class GameManager : MonoBehaviour
             playerDeck.emojis.Clear();
             shop.RollShop();
             InShop = true;
-
+            GameObject.Find("PostarePrefab").GetComponent<PostController>().RefreshData();
         }
         else if (!playerTeam.Any() && enemyTeam.Any()) // Lose
         {
@@ -175,6 +176,7 @@ public class GameManager : MonoBehaviour
             playerDeck.emojis.Clear();
             shop.RollShop();
             InShop = true;
+            GameObject.Find("PostarePrefab").GetComponent<PostController>().RefreshData();
         }
     }
 }

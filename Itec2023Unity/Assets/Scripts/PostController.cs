@@ -20,9 +20,12 @@ public class PostController : MonoBehaviour
         }
 
 
+        RefreshData();
+    }
+    public void RefreshData()
+    {
         int randomNum = Random.Range(0, AvailablePost.Count);
         textMesh.text = AvailablePost[randomNum].Text;
         Image.sprite = AvailablePost[randomNum].Image;
     }
-
 }
