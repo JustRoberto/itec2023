@@ -43,6 +43,7 @@ public class ShopController : MonoBehaviour
                 emojisInStock.Add(availableEmojis[rand]);
                 GameObject em = Instantiate(EmojiPrefab, this.transform);
                 em.GetComponent<EmojiController>().data = availableEmojis[rand];
+                em.GetComponent<EmojiController>().CopyValuesFromData();
             }
             GameManager.instance.money-=1;
             GameManager.instance.moneyText.text = GameManager.instance.money.ToString();
