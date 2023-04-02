@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Saliveaza
   ID: Saliveaza
-  Description: "\t"
+  Description: No thought behind those eyes
   Type: 
   Sprite: {fileID: 21300000, guid: 91572306f5c246a44a8697586c267797, type: 3}
   Tier: 3

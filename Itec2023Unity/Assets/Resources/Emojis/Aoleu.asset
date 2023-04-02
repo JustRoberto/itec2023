@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Aoleu
   ID: aoleu
-  Description: 
+  Description: Doesn't take damage on first attack
   Type: 
   Sprite: {fileID: 21300000, guid: 632ae273761e5bb4f91ce28a92dae7da, type: 3}
   Tier: 3
-  BaseHealth: 7
+  BaseHealth: 4
   BaseAttack: 1
   AbilityBaseDamage: 0
   AbilityBaseBoost: 0

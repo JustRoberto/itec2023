@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Inima
   ID: inima
-  Description: healer?
+  Description: <3
   Type: 
   Sprite: {fileID: 21300000, guid: e45a8c9c1163487438d0f0bfa7043918, type: 3}
   Tier: 5

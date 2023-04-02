@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Pupic
   ID: pupic
-  Description: 
+  Description: + 2 hp for emoji behind this one
   Type: 
   Sprite: {fileID: 21300000, guid: ffc9c81a36107de42a5a87593b3eb29d, type: 3}
   Tier: 3

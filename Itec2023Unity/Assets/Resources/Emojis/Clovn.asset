@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Clovn
   ID: Clovn
-  Description: 
+  Description: He's just a silly guy
   Type: 
   Sprite: {fileID: 21300000, guid: 991a906cd7162a64399a379de3f7021d, type: 3}
   Tier: 5

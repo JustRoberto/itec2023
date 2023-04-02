@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Lacrima Trista
   ID: lacrimasad
-  Description: e supi
+  Description: :((
   Type: 
   Sprite: {fileID: 21300000, guid: c9c535d250d95d84093e179682ae0f82, type: 3}
   Tier: 1
-  BaseHealth: 0
-  BaseAttack: 0
+  BaseHealth: 3
+  BaseAttack: 1
   AbilityBaseDamage: 0
   AbilityBaseBoost: 0

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Vaidemine
   ID: Vaidemine
-  Description: 
+  Description: SHOCKED
   Type: 
   Sprite: {fileID: 21300000, guid: ef9a07c3235561a4bb912d73f9b45419, type: 3}
   Tier: 4

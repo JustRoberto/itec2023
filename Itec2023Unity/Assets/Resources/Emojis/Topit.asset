@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Topit
   ID: topit
-  Description: 'se topeste '
+  Description: Doesn't take damage on first attack
   Type: 
   Sprite: {fileID: 21300000, guid: e372a312388d02547ae328956913f2b2, type: 3}
   Tier: 2

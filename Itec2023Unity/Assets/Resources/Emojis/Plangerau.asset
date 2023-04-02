@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Plange rau
   ID: plangerau
-  Description: 
+  Description: :(((
   Type: 
   Sprite: {fileID: 21300000, guid: 3fef2c288bda8d54b9935a1e20a1e047, type: 3}
   Tier: 5

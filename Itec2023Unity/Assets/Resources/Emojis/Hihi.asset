@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Hihi
   ID: hihi
-  Description: 
+  Description: Heard a funny joke
   Type: 
   Sprite: {fileID: 21300000, guid: 52c05b810283fe1438c7c1574690292f, type: 3}
   Tier: 4

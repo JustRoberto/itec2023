@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Dinti
   ID: Dinti
-  Description: 
+  Description: Careful, this guy bites
   Type: 
   Sprite: {fileID: 21300000, guid: f677d1e240c179e458f5a873bb254cde, type: 3}
   Tier: 3

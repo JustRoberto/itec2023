@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Frig
   ID: frig
-  Description: 
+  Description: Opposite of Hot
   Type: 
   Sprite: {fileID: 21300000, guid: 98e70a743802d9f4797fe692e426d492, type: 3}
   Tier: 3

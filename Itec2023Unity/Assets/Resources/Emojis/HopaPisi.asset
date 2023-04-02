@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Hopa Pisi
   ID: hopa
-  Description: 
+  Description: He thinks he's cool (he's not)
   Type: 
   Sprite: {fileID: 21300000, guid: 911e386f08c02824da52d61abea420cd, type: 3}
   Tier: 1

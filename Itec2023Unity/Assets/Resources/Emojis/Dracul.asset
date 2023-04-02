@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Dracul
   ID: Dracul
-  Description: 
+  Description: El Diablo
   Type: 
   Sprite: {fileID: 21300000, guid: a68ee27e0e6a1724fa745299524e9187, type: 3}
   Tier: 3

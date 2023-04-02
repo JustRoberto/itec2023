@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Ras cu lacrimi
   ID: rasculacrimi
-  Description: 
+  Description: Heard a really funny joke
   Type: 
   Sprite: {fileID: 21300000, guid: 8de7c8bf11bd0d54bbf784a34cf9743d, type: 3}
   Tier: 5
