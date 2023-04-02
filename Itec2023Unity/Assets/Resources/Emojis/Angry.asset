@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Angry
   ID: angry
-  Description: 
+  Description: Doesn't have a special skill, just angry >:(
   Type: 
   Sprite: {fileID: 21300000, guid: 7e8358203dac5f6428144e7f01cc3132, type: 3}
   Tier: 4

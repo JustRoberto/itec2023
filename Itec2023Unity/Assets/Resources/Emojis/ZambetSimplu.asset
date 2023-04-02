@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Zambetsimplu
   ID: zambet
-  Description: happy boy
+  Description: happy little guy
   Type: 
   Sprite: {fileID: 21300000, guid: 4bdceda2ab9535e49acd69de7a45e966, type: 3}
   Tier: 1
-  BaseHealth: 1
+  BaseHealth: 2
   BaseAttack: 1
   AbilityBaseDamage: 0
   AbilityBaseBoost: 0

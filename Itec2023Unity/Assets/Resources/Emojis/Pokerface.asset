@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Pokerface
   ID: Pokerface
-  Description: 
+  Description: Not impressed
   Type: 
   Sprite: {fileID: 21300000, guid: 6a7cd10a4a5137541a9c3d8af2f0ad1c, type: 3}
   Tier: 2

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Dog
   ID: dog
-  Description: 
+  Description: If 3 dogs are on field, grants +2 health to every dog
   Type: 
   Sprite: {fileID: 21300000, guid: 6ba51ef873c427b4f8ab9a9f3b404220, type: 3}
   Tier: 3

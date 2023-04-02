@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: O lacrima
   ID: olacrima
-  Description: 
+  Description: He's doing his best
   Type: 
   Sprite: {fileID: 21300000, guid: eca528acf2516e541bfb0653bfd49bfc, type: 3}
   Tier: 2
   BaseHealth: 3
-  BaseAttack: 0
+  BaseAttack: 1
   AbilityBaseDamage: 0
   AbilityBaseBoost: 0

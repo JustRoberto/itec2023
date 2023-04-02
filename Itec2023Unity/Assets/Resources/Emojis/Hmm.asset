@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Hmm
   ID: hmm
-  Description: 
+  Description: Hmmmmmm
   Type: 
   Sprite: {fileID: 21300000, guid: 3c7d1b488ec7aec4ebc4bc466747b90c, type: 3}
   Tier: 3

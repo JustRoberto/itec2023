@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Vomit
   ID: vomit
-  Description: 
+  Description: Weakens enemy with unpleasant odors
   Type: 
   Sprite: {fileID: 21300000, guid: 380fea9a7e6182f4a80265c68f500b91, type: 3}
   Tier: 4

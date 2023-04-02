@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: zzz
   ID: zzz
-  Description: 
+  Description: Sleepy ZzZzZ
   Type: 
   Sprite: {fileID: 21300000, guid: ac8cdbb80d61a45489762d2cdbaccc52, type: 3}
   Tier: 1
-  BaseHealth: 0
-  BaseAttack: 0
+  BaseHealth: 1
+  BaseAttack: 1
   AbilityBaseDamage: 0
   AbilityBaseBoost: 0

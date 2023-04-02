@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Nebunul
   ID: nebunul
-  Description: 
+  Description: High damage, extremely low health
   Type: 
   Sprite: {fileID: 21300000, guid: e5935e241f48dcb45b96f8f19e57f080, type: 3}
   Tier: 5

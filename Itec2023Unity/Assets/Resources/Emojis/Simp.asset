@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Simp
   ID: Simp
-  Description: 
+  Description: Cancels 2 enemy attacks
   Type: 
   Sprite: {fileID: 21300000, guid: 84ad3b677fa11a943b57f4b33fb1d11f, type: 3}
   Tier: 3

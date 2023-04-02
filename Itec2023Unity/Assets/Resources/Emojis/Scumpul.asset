@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Scumpul
   ID: scump
-  Description: 
+  Description: So cute
   Type: 
   Sprite: {fileID: 21300000, guid: 8deb8c5f78f6a8449be23e1059bdb338, type: 3}
   Tier: 4

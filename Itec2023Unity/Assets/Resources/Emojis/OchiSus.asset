@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: ochiisus
   ID: ochiisus
-  Description: se uita in sus, idk
+  Description: Not paying attention
   Type: 
   Sprite: {fileID: 21300000, guid: 13c9593252916804d9b402cc5ff22ba7, type: 3}
   Tier: 1
   BaseHealth: 1
-  BaseAttack: 0
+  BaseAttack: 1
   AbilityBaseDamage: 0
   AbilityBaseBoost: 0

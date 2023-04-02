@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Cloud
   ID: cloud
-  Description: Norisor
+  Description: Doesn't take damage on first attack
   Type: 
   Sprite: {fileID: 21300000, guid: c4f53024936af6c4fb688188b9ce01d3, type: 3}
   Tier: 2

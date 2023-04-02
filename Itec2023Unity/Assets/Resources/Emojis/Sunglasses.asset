@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Sunglasses
   ID: Sunglasses
-  Description: 
+  Description: He's so cool
   Type: 
   Sprite: {fileID: 21300000, guid: 64ed7235e29d1184bb8cd0a9edc5488f, type: 3}
   Tier: 3

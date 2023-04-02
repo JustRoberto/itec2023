@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Wow
   ID: wow
-  Description: SURPRINS
+  Description: SURPRISED
   Type: 
   Sprite: {fileID: 21300000, guid: 34588a6e8fc936740b5d084bbac042e6, type: 3}
   Tier: 2

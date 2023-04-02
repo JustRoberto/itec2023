@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Uwu
   ID: uwu
-  Description: 
+  Description: Cancels 3 enemy attacks
   Type: 
   Sprite: {fileID: 21300000, guid: 5481d9f543269614883b47fd53e46a6f, type: 3}
-  Tier: 0
-  BaseHealth: 0
-  BaseAttack: 0
+  Tier: 4
+  BaseHealth: 5
+  BaseAttack: 3
   AbilityBaseDamage: 0
   AbilityBaseBoost: 0

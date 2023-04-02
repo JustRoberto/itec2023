@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Sad
   ID: sad
-  Description: 
+  Description: :(
   Type: 
   Sprite: {fileID: 21300000, guid: d40278c497fb0d14688820697ac8f81e, type: 3}
   Tier: 3
