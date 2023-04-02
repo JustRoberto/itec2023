@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
@@ -16,6 +17,7 @@ public class GameManager : MonoBehaviour
     public List<GameObject> enemyTeam;
     public TextMeshProUGUI moneyText;
     public bool InShop = true;
+    public bool IsAttacking = false;
     public int money= 10;
     private void Awake()
     {
@@ -30,7 +32,16 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
+    void Update()
+    {
+        if(!InShop)
+        {
+            if(!IsAttacking)
+            {
+                StartCoroutine("FightCoroutine");
+            }
+        }
+    }
     public void Ready()
     {
 
@@ -72,9 +83,10 @@ public class GameManager : MonoBehaviour
         enemyTeam = enemyAttackDeck.getTeam();
 
     }
-
-    public void Fight()
+    IEnumerator FightCoroutine()
     {
+        IsAttacking = true;
+        yield return new WaitForSeconds(1.5f);
         playerTeam = playerAttackDeck.getTeam();
         enemyTeam = enemyAttackDeck.getTeam();
         CheckIfWin();
@@ -83,13 +95,33 @@ public class GameManager : MonoBehaviour
             playerTeam.Last().GetComponent<EmojiController>().Damage(enemyTeam.Last().GetComponent<EmojiController>().Attack);
             enemyTeam.Last().GetComponent<EmojiController>().Damage(playerTeam.Last().GetComponent<EmojiController>().Attack);
         }
-        catch(System.Exception e)
+        catch (System.Exception e)
         {
 
         }
         playerTeam = playerAttackDeck.getTeam();
         enemyTeam = enemyAttackDeck.getTeam();
+        IsAttacking = false;
+    }
+    public void Fight()
+    {
+        if (!InShop)
+        {
+            playerTeam = playerAttackDeck.getTeam();
+            enemyTeam = enemyAttackDeck.getTeam();
+            CheckIfWin();
+            try
+            {
+                playerTeam.Last().GetComponent<EmojiController>().Damage(enemyTeam.Last().GetComponent<EmojiController>().Attack);
+                enemyTeam.Last().GetComponent<EmojiController>().Damage(playerTeam.Last().GetComponent<EmojiController>().Attack);
+            }
+            catch (System.Exception e)
+            {
 
+            }
+            playerTeam = playerAttackDeck.getTeam();
+            enemyTeam = enemyAttackDeck.getTeam();         
+        }
 
     }
 
