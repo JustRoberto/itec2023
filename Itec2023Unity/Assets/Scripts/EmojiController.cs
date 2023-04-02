@@ -12,6 +12,10 @@ public class EmojiController : MonoBehaviour
     public TextMeshProUGUI HealthValue;
     public GameObject UpgradeButton;
 
+    public GameObject projectilePrefab;
+    public float projectileSpeed = 10f;
+    public float projectileHeight = 5f;
+
     public int Health;
     public int Attack;
 
@@ -57,6 +61,46 @@ public class EmojiController : MonoBehaviour
         RefreshStats();
         ShakeObject(this.gameObject, 0.2f, 3);
 
+    }
+    public void Snipe(EmojiController other)
+    {
+        FireProjectile(this.transform,other.transform)
+    }
+    public void FireProjectile(Vector2 startPos, Vector2 endPos)
+    {
+        GameObject projectile = Instantiate(projectilePrefab, startPos, Quaternion.identity);
+        Image projectileImage = projectile.GetComponent<Image>();
+        float distance = Vector2.Distance(startPos, endPos);
+        float travelTime = distance / projectileSpeed;
+        Vector2 midPoint = (startPos + endPos) / 2f;
+        midPoint.y += projectileHeight;
+        projectile.transform.SetParent(GameObject.Find("Canvas").transform);
+        projectile.transform.SetAsLastSibling();
+
+        StartCoroutine(MoveProjectile(projectile.transform, midPoint, travelTime / 2f));
+        StartCoroutine(MoveProjectile(projectile.transform, endPos, travelTime / 2f, travelTime / 2f));
+
+        float angle = Mathf.Atan2(endPos.y - startPos.y, endPos.x - startPos.x) * Mathf.Rad2Deg;
+        projectileImage.transform.rotation = Quaternion.Euler(0, 0, angle);
+    }
+
+    private IEnumerator MoveProjectile(Transform projectileTransform, Vector2 targetPos, float time, float delay = 0f)
+    {
+        yield return new WaitForSeconds(delay);
+
+        float timer = 0f;
+        Vector2 startPos = projectileTransform.position;
+
+        while (timer < time)
+        {
+            timer += Time.deltaTime;
+            float t = timer / time;
+            t = Mathf.Sin(t * Mathf.PI * 0.5f);
+            projectileTransform.position = Vector2.Lerp(startPos, targetPos, t);
+            yield return null;
+        }
+
+        projectileTransform.position = targetPos;
     }
     public void RefreshStats()
     {
