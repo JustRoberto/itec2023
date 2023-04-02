@@ -55,6 +55,8 @@ public class EmojiController : MonoBehaviour
             Destroy(this.gameObject);
         }
         RefreshStats();
+        ShakeObject(this.gameObject, 0.2f, 3);
+
     }
     public void RefreshStats()
     {
@@ -73,5 +75,27 @@ public class EmojiController : MonoBehaviour
                 Destroy(this.gameObject);
             }
         }
+    }
+
+    public void ShakeObject(GameObject objToShake, float duration, float intensity)
+    {
+        StartCoroutine(DoShakeObject(objToShake, duration, intensity));
+    }
+
+    private IEnumerator DoShakeObject(GameObject objToShake, float duration, float intensity)
+    {
+        Vector3 originalPos = objToShake.transform.position;
+        float elapsed = 0f;
+
+        while (elapsed < duration)
+        {
+            float x = Random.Range(-1f, 1f) * intensity;
+            float y = Random.Range(-1f, 1f) * intensity;
+            objToShake.transform.position = new Vector3(originalPos.x + x, originalPos.y + y, originalPos.z);
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        objToShake.transform.position = originalPos;
     }
 }

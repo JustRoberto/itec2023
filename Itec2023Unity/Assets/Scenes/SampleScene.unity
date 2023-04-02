@@ -854,6 +854,7 @@ MonoBehaviour:
   playerTeam: []
   enemyTeam: []
   moneyText: {fileID: 1624705744}
+  InShop: 1
   money: 0
 --- !u!1 &304078773
 GameObject:

@@ -16,7 +16,7 @@ MonoBehaviour:
     health
 
 '
-  Image: {fileID: 0}
+  Image: {fileID: 21300000, guid: 100d6244d2de5a94d98db70737ebecfd, type: 3}
   PerfectMatch: []
   GoodMatch: []
   BadMatch: []

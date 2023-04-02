@@ -34,13 +34,9 @@ public class PlayerDeckController : MonoBehaviour
     {
 
         var em = Instantiate(emoji, parent);
-        Debug.Log(emoji.GetComponent<EmojiController>().Attack);
-        Debug.Log(em.GetComponent<EmojiController>().Attack);
-        //em.GetComponent<EmojiController>().data = emoji;
-        //em.GetComponent<EmojiController>().Attack = Attack;
-        //em.GetComponent<EmojiController>().Health = Health;
+
         em.GetComponent<EmojiController>().RefreshStats();
-        //emojis.Add(emoji.GetComponent<EmojiController>().data);
+
     }
 
     public void Shuffle()
