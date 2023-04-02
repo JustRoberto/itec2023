@@ -10,6 +10,7 @@ public class EmojiController : MonoBehaviour
     public Image Image;
     public TextMeshProUGUI AttackValue;
     public TextMeshProUGUI HealthValue;
+    public GameObject UpgradeButton;
 
     public int Health;
     public int Attack;
@@ -18,14 +19,33 @@ public class EmojiController : MonoBehaviour
     public object Gameobject { get; private set; }
 
     // Start is called before the first frame update
-    void Start()
+
+    public void Start()
+    {
+        if (GameManager.instance.InShop == false || this.transform.parent.gameObject.name == "Shop")
+        {
+            UpgradeButton.SetActive(false);
+        }
+    }
+
+   public void CopyValuesFromData()
     {
         Image.sprite = data.Sprite;
         Health = data.BaseHealth;
         Attack = data.BaseAttack;
         RefreshStats();
     }
-
+   public void Upgrade ()
+    {
+        if (GameManager.instance.money >= 3)
+        {
+            Attack += 2;
+            RefreshStats();
+            GameManager.instance.money -= 4;
+            GameManager.instance.moneyText.text = GameManager.instance.money.ToString();
+            UpgradeButton.SetActive(false);
+        }
+    }
   public void Damage(int dmg)
     {
         
@@ -35,6 +55,8 @@ public class EmojiController : MonoBehaviour
             Destroy(this.gameObject);
         }
         RefreshStats();
+        ShakeObject(this.gameObject, 0.2f, 3);
+
     }
     public void RefreshStats()
     {
@@ -47,11 +69,33 @@ public class EmojiController : MonoBehaviour
         {
             if (GameManager.instance.money >= 3)
             {
-                GameManager.instance.playerDeck.Add(this.data);
+                GameManager.instance.playerDeck.AddToPlayerDeckFromShop(this.data);
                 GameManager.instance.money -= 3;
                 GameManager.instance.moneyText.text = GameManager.instance.money.ToString();
                 Destroy(this.gameObject);
             }
         }
+    }
+
+    public void ShakeObject(GameObject objToShake, float duration, float intensity)
+    {
+        StartCoroutine(DoShakeObject(objToShake, duration, intensity));
+    }
+
+    private IEnumerator DoShakeObject(GameObject objToShake, float duration, float intensity)
+    {
+        Vector3 originalPos = objToShake.transform.position;
+        float elapsed = 0f;
+
+        while (elapsed < duration)
+        {
+            float x = Random.Range(-1f, 1f) * intensity;
+            float y = Random.Range(-1f, 1f) * intensity;
+            objToShake.transform.position = new Vector3(originalPos.x + x, originalPos.y + y, originalPos.z);
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        objToShake.transform.position = originalPos;
     }
 }

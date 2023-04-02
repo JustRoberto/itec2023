@@ -13,11 +13,30 @@ public class PlayerDeckController : MonoBehaviour
     {
 
     }
-    public void Add(EmojiScriptableObject emoji)
+    public void AddToPlayerDeckFromShop(EmojiScriptableObject emoji)
     {
         var em = Instantiate(emojiprefab, parent);
         em.GetComponent<EmojiController>().data = emoji;
+        em.GetComponent<EmojiController>().CopyValuesFromData();
+        //em.GetComponent<EmojiController>().Attack = Attack;
+        //em.GetComponent<EmojiController>().Health = Health;
+        em.GetComponent<EmojiController>().RefreshStats();
+}
+    public void InsertEnemy(EmojiScriptableObject emoji)
+    {
+
+        var em = Instantiate(emojiprefab, parent);
+        em.GetComponent<EmojiController>().data = emoji;
+        em.GetComponent<EmojiController>().CopyValuesFromData();
         emojis.Add(emoji);
+    }
+    public void InsertEmojiINBattle(GameObject emoji)
+    {
+
+        var em = Instantiate(emoji, parent);
+
+        em.GetComponent<EmojiController>().RefreshStats();
+
     }
 
     public void Shuffle()

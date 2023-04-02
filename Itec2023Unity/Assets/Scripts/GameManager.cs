@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public List<GameObject> playerTeam;
     public List<GameObject> enemyTeam;
     public TextMeshProUGUI moneyText;
+    public bool InShop = true;
     public int money= 10;
     private void Awake()
     {
@@ -33,12 +34,12 @@ public class GameManager : MonoBehaviour
 
     public void Ready()
     {
-       foreach(EmojiScriptableObject emoji in playerDeck.emojis)
-        {
-            
-            playerAttackDeck.Add(emoji);
-            
 
+        foreach (GameObject emoji in playerDeck.getTeam())
+        {
+
+            playerAttackDeck.InsertEmojiINBattle(emoji);
+            InShop = false;
         }
         var availableEmojis = new List<EmojiScriptableObject>();
         var allEmoji = Resources.LoadAll("Emojis", typeof(EmojiScriptableObject));
@@ -49,7 +50,7 @@ public class GameManager : MonoBehaviour
         for (int i = 0; i < 5; i++)
         {
             int rand = Random.Range(0, availableEmojis.Count);
-            enemyAttackDeck.Add(availableEmojis[rand]);
+            enemyAttackDeck.InsertEnemy(availableEmojis[rand]);
 
         }
     }
@@ -111,6 +112,7 @@ public class GameManager : MonoBehaviour
             enemyAttackDeck.EmptyDeck();
             playerDeck.emojis.Clear();
             shop.RollShop();
+            InShop = true;
         }
         else if(playerTeam.Any() && !enemyTeam.Any()) //Castig
         {
@@ -124,6 +126,7 @@ public class GameManager : MonoBehaviour
             enemyAttackDeck.EmptyDeck();
             playerDeck.emojis.Clear();
             shop.RollShop();
+            InShop = true;
 
         }
         else if (!playerTeam.Any() && enemyTeam.Any()) // Lose
@@ -139,6 +142,7 @@ public class GameManager : MonoBehaviour
             enemyAttackDeck.EmptyDeck();
             playerDeck.emojis.Clear();
             shop.RollShop();
+            InShop = true;
         }
     }
 }
