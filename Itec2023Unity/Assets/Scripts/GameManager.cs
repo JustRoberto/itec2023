@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public PlayerDeckController playerAttackDeck;
     public PlayerDeckController enemyAttackDeck;
     public ShopController shop;
+    public SoundController SoundController;
 
     public List<GameObject> playerTeam;
     public List<GameObject> enemyTeam;
@@ -87,6 +88,7 @@ public class GameManager : MonoBehaviour
     {
         IsAttacking = true;
         yield return new WaitForSeconds(1.5f);
+                GameManager.instance.SoundController.PlayRandomSound();
         playerTeam = playerAttackDeck.getTeam();
         enemyTeam = enemyAttackDeck.getTeam();
         CheckIfWin();
